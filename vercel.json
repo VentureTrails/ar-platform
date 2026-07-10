@@ -1,3 +1,17 @@
 {
-  "outputDirectory": "frontend/build"
+  "outputDirectory": "frontend/build",
+  "routes": [
+    {
+      "src": "/health",
+      "dest": "/api/health.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.+(?!\\.\\w+$)(?<!\\/))$",
+      "dest": "/index.html"
+    }
+  ]
 }
