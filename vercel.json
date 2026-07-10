@@ -1,20 +1,5 @@
 {
   "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/build",
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)\\.(?:css|js|gif|jpg|jpeg|png|woff|woff2|eot|ttf|otf|svg|webp)",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      }
-    },
-    {
-      "src": "/((?!_next).)*",
-      "dest": "/index.html"
-    }
-  ]
+  "public": "public"
 }
